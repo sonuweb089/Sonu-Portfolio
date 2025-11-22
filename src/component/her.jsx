@@ -3,15 +3,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import Profile from "../assets/s.png";
 import { ShootingStars } from "./Ui/shooting-stars";
-import { StarsBackground } from "./Ui/stars-background";
+import { Download } from "lucide-react";
+import Resume from "../assets/Sonu-Resume.pdf";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 md:px-12 relative overflow-hidden bg-[#081016]">
+    <section className="min-h-screen flex items-center justify-center pt-6 md:px-12 relative overflow-hidden bg-[#081016]">
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(30,60,80,0.45),transparent_70%)]"></div>
       <ShootingStars />
-      <StarsBackground />
+
       <div className="relative w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* ==== TEXT SECTION ==== */}
         <motion.div
@@ -53,19 +54,32 @@ const Hero = () => {
           <div className="flex justify-center md:justify-start gap-4 pt-4">
             <motion.button
               whileHover={{ scale: 1.05 }}
-              className="px-8 py-3 bg-emerald-400 text-black font-semibold 
-                         rounded-md shadow-lg hover:bg-emerald-500 transition"
-            >
-              View Projects
-            </motion.button>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
               className="px-8 py-3 border border-emerald-400 text-white 
                          rounded-md hover:bg-white/5 transition"
             >
               Get in Touch
             </motion.button>
+            <a href="/Sonu-Resume.pdf" download>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="px-8 py-3 bg-emerald-400 text-black font-semibold 
+               rounded-md shadow-lg hover:bg-emerald-500 transition
+               inline-flex items-center gap-2"
+              >
+                Resume
+                {/* ICON LOOP ANIMATION */}
+                <motion.div
+                  animate={{ y: [0, -6, 0] }} // Up → Down → Up
+                  transition={{
+                    duration: 1.2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <Download size={20} />
+                </motion.div>
+              </motion.button>
+            </a>
           </div>
         </motion.div>
 

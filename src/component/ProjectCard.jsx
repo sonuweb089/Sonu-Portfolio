@@ -49,7 +49,7 @@ const ProjectCard = ({ title, desc, tags }) => {
         <button
           className="
             flex items-center gap-2 px-6 py-2 rounded-lg
-            bg-[hsl(var(--tech-accent))] text-black font-medium
+            bg-[hsl(var(--tech-accent))] text-[#7ef2c8] font-medium
             hover:opacity-90 transition-all
           "
         >

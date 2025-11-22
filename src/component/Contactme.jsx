@@ -30,36 +30,37 @@ const GetInTouch = () => {
             <ContactCard
               icon={<Mail size={28} />}
               title="Email"
-              value="sonuk24227@gmail.com"
+              href="mailto:sonuk24227@gmail.com"
             />
             <ContactCard
               icon={<Github size={28} />}
               title="GitHub"
-              value="github.com/sonu164"
+              href="https://github.com/sonu164"
             />
             <ContactCard
               icon={<Linkedin size={28} />}
               title="LinkedIn"
-              value="www.linkedin.com/in/sonu-kumar-7a3b72264"
+              href="https://www.linkedin.com/in/sonu-kumar-7a3b72264"
             />
             <ContactCard
               icon={<Twitter size={28} />}
               title="Twitter"
-              value="Sonukumar"
+              href="https://twitter.com/Sonukumar"
             />
           </div>
 
           {/* Button */}
           <div className="flex justify-center">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              href="mailto:sonuk24227@gmail.com"
-              className="inline-flex items-center gap-3 bg-[#31e6be] text-black font-semibold px-8 py-3 rounded-xl shadow-lg shadow-[#31e6be]/20"
-            >
-              <Mail size={20} />
-              Send me an email
-            </motion.a>
+            <a href="mailto:sonuk24227@gmail.com">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex items-center gap-3 bg-[#31e6be] text-black font-semibold px-8 py-3 rounded-xl shadow-lg shadow-[#31e6be]/20 cursor-pointer"
+              >
+                <Mail size={20} />
+                Send me an email
+              </motion.div>
+            </a>
           </div>
         </div>
       </motion.div>
@@ -68,16 +69,19 @@ const GetInTouch = () => {
 };
 
 export default GetInTouch;
-function ContactCard({ icon, title, value }) {
+
+/* CONTACT CARD WITH ANCHOR TAG */
+function ContactCard({ icon, title, href }) {
   return (
-    <motion.div
-      whileHover={{ y: -4 }}
-      transition={{ type: "spring", stiffness: 120 }}
-      className="bg-[#1a2230] border border-white/10 rounded-xl p-6 text-center shadow-lg"
-    >
-      <div className="flex justify-center mb-3 text-[#3fffd7]">{icon}</div>
-      <h3 className="text-white font-semibold mb-1">{title}</h3>
-      <p className="text-gray-400 text-sm">{value}</p>
-    </motion.div>
+    <a href={href} target="_blank" rel="noopener noreferrer" className="block">
+      <motion.div
+        whileHover={{ y: -4 }}
+        transition={{ type: "spring", stiffness: 120 }}
+        className="bg-[#1a2230] border border-white/10 rounded-xl p-6 text-center shadow-lg cursor-pointer"
+      >
+        <div className="flex justify-center mb-3 text-[#3fffd7]">{icon}</div>
+        <h3 className="text-white font-semibold mb-1">{title}</h3>
+      </motion.div>
+    </a>
   );
 }
