@@ -59,7 +59,7 @@ const Hero = () => {
             >
               Get in Touch
             </motion.button>
-            <a href="/Sonu-Resume.pdf" download>
+            <a href={Resume} download>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 className="px-8 py-3 bg-emerald-400 text-black font-semibold 
