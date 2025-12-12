@@ -9,7 +9,7 @@ import Contectme from "./component/Contactme";
 import Footer from "./component/footer";
 const App = () => {
   return (
-    <div>
+    <div className="scroll-auto-none">
       <Navbar />
       <TechStack />
       <FeatureCard />

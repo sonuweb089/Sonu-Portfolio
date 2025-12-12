@@ -57,7 +57,7 @@ const TechStack = () => {
   return (
     <section
       id="tech"
-      className="py-24 px-6 bg-[#0d1117] relative overflow-hidden"
+      className="md:py-24 px-6 bg-[#0d1117] relative overflow-hidden"
     >
       {/* Glowing background shadow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.1),transparent_70%)] pointer-events-none"></div>
