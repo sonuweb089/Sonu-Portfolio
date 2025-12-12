@@ -54,7 +54,7 @@ const ProjectCard = ({ title, desc, tags }) => {
           "
         >
           <ExternalLink size={16} />
-          Demo
+          <a href="https://nexushub-delta.vercel.app/"> Demo</a>
         </button>
       </div>
     </div>
